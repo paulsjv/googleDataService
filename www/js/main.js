@@ -1,9 +1,13 @@
-import 'bootstrap';
-
 import angular from 'angular';
-import helloWorldDirective from './directives/helloWorldDirective';
-import HelloWorldController from './controllers/HelloWorldController';
+import GoogleDataService from './services/googleDataService';
+import GoogleQueryService from './services/googleQueryService';
+import google from './async/google.js';
 
-export default angular.module('main', [])
-    .directive('helloWorld', helloWorldDirective)
-    .controller('helloWorldController', HelloWorldController);
+export default angular.module('google', []);
+
+google.then(($google) => {
+    angular.module('google',[])
+        .constant('$google', $google)
+        .service('googleDataService', GoogleDataService)
+        .service('googleQueryService', GoogleQueryService);
+});
