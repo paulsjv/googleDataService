@@ -8,8 +8,8 @@ export default class GoogleQueryService {
         $log.debug('googleQueryService.js - in constructor!');
         this.log = $log;
         this.config = CONFIG;
-        this.dataQuery = "select %columns where %config.state[0] is not null AND toDate(%config.state[0]) >= toDate(date '%sd') AND toDate(%config.state[0]) <= toDate(date '%ed') %t order by %config.state[0] asc",
-        this.configQuery = 'select *',
+        this.dataQuery = "select %columns where %config.state[0] is not null AND toDate(%config.state[0]) >= toDate(date '%sd') AND toDate(%config.state[0]) <= toDate(date '%ed') %t order by %config.state[0] asc";
+        this.configQuery = 'select *';
 
     }
 

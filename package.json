@@ -58,7 +58,10 @@
   "jspm": {
     "dependencies": {
       "angular": "github:angular/bower-angular@^1.4.6",
-      "angular-mocks": "github:angular/bower-angular-mocks@^1.4.6"
+      "angular-mocks": "github:angular/bower-angular-mocks@^1.4.6",
+      "font-awesome": "npm:font-awesome@^4.4.0",
+      "bootstrap": "github:twbs/bootstrap@3.3.5",
+      "bootstrap-sass": "github:twbs/bootstrap-sass@3.3.5"
     },
     "devDependencies": {
       "babel": "npm:babel-core@^5.8.24",
